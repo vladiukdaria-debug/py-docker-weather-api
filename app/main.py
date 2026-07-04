@@ -1,5 +1,5 @@
 import os
-import  requests
+import requests
 
 API_KEY = os.environ["API_KEY"]
 URL = "http://api.weatherapi.com/v1/current.json?key=" + API_KEY
@@ -16,7 +16,7 @@ def get_weather() -> None:
         f"{result['location']['localtime']} Weather: " \
         f"{result['current']['temp_c']} Celsius," \
         f"{result['current']['condition']['text']}"
-    
+
     print(formatted_result)
 
 
